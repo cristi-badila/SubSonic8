@@ -112,6 +112,8 @@
     <Compile Include="EventAggregatorMessages\PlaybackMessageBase.cs" />
     <Compile Include="EventAggregatorMessages\PlayFailedMessage.cs" />
     <Compile Include="EventAggregatorMessages\PlayMessage.cs" />
+    <Compile Include="Exceptions\ApiException.cs" />
+    <Compile Include="RedirectingHandler.cs" />
     <Compile Include="Models\IMediaModel.cs" />
     <Compile Include="Models\ISongModel.cs" />
     <Compile Include="Models\Subsonic\SubsonicResponse.cs" />
