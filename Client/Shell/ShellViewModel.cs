@@ -147,6 +147,11 @@
             NavigationService.NavigateToViewModel<SearchViewModel>(query);
         }
 
+        public void ToggleAppBar()
+        {
+            BottomBar.IsOpened = !BottomBar.IsOpened;
+        }
+
         #endregion
 
         #region Methods

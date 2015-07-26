@@ -40,13 +40,17 @@
         <ProgressBar VerticalAlignment="Top" VerticalContentAlignment="Top" x:Name="LoadingIndicator"
                      Visibility="Collapsed" IsIndeterminate="True" HorizontalAlignment="Stretch" />
 
-        <controls:CustomAppBar IsLightDismissEnabled="True" CanOpenInSnappedView="False" IsOpen="{Binding Path=BottomBar.IsOpened, Mode=TwoWay}" 
+        <StackPanel VerticalAlignment="Bottom">
+            <Button Style="{StaticResource AppBarHintStyle}" cal:Message.Attach="[Event Click] = [Action ToggleAppBar]"/>
+            <controls:CustomAppBar IsLightDismissEnabled="True" CanOpenInSnappedView="False" IsOpen="{Binding Path=BottomBar.IsOpened, Mode=TwoWay}" 
                                CanDismiss="{Binding Path=BottomBar.CanDismiss, Converter={StaticResource InvertedBooleanConverter}}">
-            <ContentControl x:Name="BottomBar" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
-        </controls:CustomAppBar>
+                <StackPanel>
+                    <ContentControl x:Name="BottomBar" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+                </StackPanel>
+            </controls:CustomAppBar>
+        </StackPanel>
 
-        <errorDialog:ErrorDialogView cal:Bind.Model="{Binding Path=ErrorDialogViewModel}" 
-                                    Visibility="{Binding Path=IsHidden, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"/>
+
 
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
