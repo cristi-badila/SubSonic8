@@ -3,8 +3,8 @@
   <Identity Name="e1e0eaed-5ebb-4c88-ae49-2a70719aafb1" Publisher="CN=Crist" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="e1e0eaed-5ebb-4c88-ae49-2a70719aafb1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Client</DisplayName>
-    <PublisherDisplayName>Crist</PublisherDisplayName>
+    <DisplayName>Subsonic8</DisplayName>
+    <PublisherDisplayName>Cristi Badila</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -16,10 +16,11 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Client.App">
       <uap:VisualElements DisplayName="Subsonic8" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Subsonic8" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Subsonic8">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="Subsonic8" Square71x71Logo="Assets\Square71x71Logo.png" Square310x310Logo="Assets\Square310x310Logo.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
