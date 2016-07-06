@@ -1,162 +1,136 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A8F49761-4D7A-458F-B1B1-4A66C421B3AA}</ProjectGuid>
+    <ProjectGuid>{FAB5D35B-530D-484A-9C57-34943ADF0FE5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Client.Common</RootNamespace>
     <AssemblyName>Client.Common</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
-    <TargetPlatformVersion>8.1</TargetPlatformVersion>
-    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
-    <TargetFrameworkVersion />
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\ARM\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>ARM</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
-    <OutputPath>bin\ARM\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>ARM</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
-    <NoWarn>;2008</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
-    <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <NoWarn>;2008</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
     <NoWarn>;2008</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
-    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EventAggregatorMessages\PlayNextMessage.cs" />
-    <Compile Include="EventAggregatorMessages\ToggleRepeatMessage.cs" />
-    <Compile Include="Results\SubsonicApiCallErrorResponseHandler.cs" />
-    <Compile Include="SubsonicCommonModule.cs" />
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventAggregatorMessages\AddItemsMessage.cs" />
+    <Compile Include="EventAggregatorMessages\JumpToNextMessage.cs" />
+    <Compile Include="EventAggregatorMessages\JumpToPreviousMessage.cs" />
+    <Compile Include="EventAggregatorMessages\PauseMessage.cs" />
     <Compile Include="EventAggregatorMessages\PausePlaybackMessage.cs" />
     <Compile Include="EventAggregatorMessages\PlaybackMessageBase.cs" />
     <Compile Include="EventAggregatorMessages\PlayFailedMessage.cs" />
-    <Compile Include="EventAggregatorMessages\PlayMessage.cs" />
-    <Compile Include="Models\IMediaModel.cs" />
-    <Compile Include="Models\ISongModel.cs" />
-    <Compile Include="Models\Subsonic\SubsonicResponse.cs" />
-    <Compile Include="Models\Subsonic\Error.cs" />
-    <Compile Include="Models\Subsonic\GenericMediaModel.cs" />
-    <Compile Include="Models\Subsonic\MediaModelBase.cs" />
-    <Compile Include="Models\Subsonic\Playlist.cs" />
-    <Compile Include="Models\Subsonic\PlaylistCollection.cs" />
-    <Compile Include="Models\Subsonic\PlaylistEntry.cs" />
-    <Compile Include="Models\Subsonic\SubsonicResponseEnum.cs" />
-    <Compile Include="Results\CreatePlaylistResult.cs" />
-    <Compile Include="Results\DeletePlaylistResult.cs" />
-    <Compile Include="Results\EmptyResponseResultBase.cs" />
-    <Compile Include="Results\GetAllPlaylistsResult.cs" />
-    <Compile Include="Results\GetPlaylistResult.cs" />
-    <Compile Include="Results\GetRandomSongsResult.cs" />
-    <Compile Include="Results\IDeletePlaylistResult.cs" />
-    <Compile Include="Results\IEmptyResponseResult.cs" />
-    <Compile Include="Results\IGetAllPlaylistsResult.cs" />
-    <Compile Include="Results\IGetPlaylistResult.cs" />
-    <Compile Include="Results\ICreatePlaylistResult.cs" />
-    <Compile Include="Results\IGetRandomSongsResult.cs" />
-    <Compile Include="Results\IPingResult.cs" />
-    <Compile Include="Results\IRenamePlaylistResult.cs" />
-    <Compile Include="Results\IUpdatePlaylistResult.cs" />
-    <Compile Include="Results\PingResult.cs" />
-    <Compile Include="Results\RenamePlaylistResult.cs" />
-    <Compile Include="Results\UpdatePlaylistResult.cs" />
-    <Compile Include="Services\DataStructures\PlayerManagementService\IPlayer.cs" />
-    <Compile Include="Services\DataStructures\PlayerManagementService\IVideoPlayer.cs" />
-    <Compile Include="Services\DataStructures\PlayerManagementService\PlaybackStateEventArgs.cs" />
-    <Compile Include="Services\DataStructures\PlayerManagementService\PlayerType.cs" />
-    <Compile Include="Services\DataStructures\PlaylistManagementService\PlaybackState.cs" />
-    <Compile Include="Services\DataStructures\SubsonicService\SubsonicServiceConfiguration.cs" />
-    <Compile Include="Services\IPlayerManagementService.cs" />
-    <Compile Include="EventAggregatorMessages\PauseMessage.cs" />
-    <Compile Include="Services\PlayerManagementService.cs" />
     <Compile Include="EventAggregatorMessages\PlayItemAtIndexMessage.cs" />
+    <Compile Include="EventAggregatorMessages\PlaylistStateChangedMessage.cs" />
+    <Compile Include="EventAggregatorMessages\PlayMessage.cs" />
+    <Compile Include="EventAggregatorMessages\PlayNextMessage.cs" />
     <Compile Include="EventAggregatorMessages\PlayPauseMessage.cs" />
     <Compile Include="EventAggregatorMessages\RemoveItemsMessage.cs" />
     <Compile Include="EventAggregatorMessages\ResumePlaybackMessage.cs" />
     <Compile Include="EventAggregatorMessages\StartPlaybackMessage.cs" />
     <Compile Include="EventAggregatorMessages\StopMessage.cs" />
+    <Compile Include="EventAggregatorMessages\StopPlaybackMessage.cs" />
+    <Compile Include="EventAggregatorMessages\ToggleRepeatMessage.cs" />
     <Compile Include="EventAggregatorMessages\ToggleShuffleMessage.cs" />
+    <Compile Include="Helpers\IMediaControlHandler.cs" />
+    <Compile Include="Helpers\MediaControlHandler.cs" />
     <Compile Include="Models\IId.cs" />
+    <Compile Include="Models\IMediaModel.cs" />
+    <Compile Include="Models\ISongModel.cs" />
     <Compile Include="Models\ISubsonicModel.cs" />
     <Compile Include="Models\PlaylistHistoryStack.cs" />
     <Compile Include="Models\PlaylistItem.cs" />
@@ -166,107 +140,93 @@
     <Compile Include="Models\SubsonicModelTypeEnum.cs" />
     <Compile Include="Models\Subsonic\Album.cs" />
     <Compile Include="Models\Subsonic\Artist.cs" />
+    <Compile Include="Models\Subsonic\Error.cs" />
     <Compile Include="Models\Subsonic\ExpandedArtist.cs" />
+    <Compile Include="Models\Subsonic\GenericMediaModel.cs" />
     <Compile Include="Models\Subsonic\IndexItem.cs" />
+    <Compile Include="Models\Subsonic\MediaModelBase.cs" />
     <Compile Include="Models\Subsonic\MusicDirectory.cs" />
     <Compile Include="Models\Subsonic\MusicDirectoryChild.cs" />
     <Compile Include="Models\Subsonic\MusicFolder.cs" />
+    <Compile Include="Models\Subsonic\Playlist.cs" />
+    <Compile Include="Models\Subsonic\PlaylistCollection.cs" />
+    <Compile Include="Models\Subsonic\PlaylistEntry.cs" />
     <Compile Include="Models\Subsonic\SearchResultCollection.cs" />
     <Compile Include="Models\Subsonic\Song.cs" />
     <Compile Include="Models\Subsonic\SubsonicModelBase.cs" />
+    <Compile Include="Models\Subsonic\SubsonicResponse.cs" />
+    <Compile Include="Models\Subsonic\SubsonicResponseEnum.cs" />
     <Compile Include="ObjectExtensionMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\CreatePlaylistResult.cs" />
+    <Compile Include="Results\DeletePlaylistResult.cs" />
+    <Compile Include="Results\EmptyResponseResultBase.cs" />
     <Compile Include="Results\GetAlbumResult.cs" />
+    <Compile Include="Results\GetAllPlaylistsResult.cs" />
     <Compile Include="Results\GetArtistsResult.cs" />
     <Compile Include="Results\GetIndexResult.cs" />
     <Compile Include="Results\GetMusicDirectoryResult.cs" />
+    <Compile Include="Results\GetPlaylistResult.cs" />
+    <Compile Include="Results\GetRandomSongsResult.cs" />
     <Compile Include="Results\GetRootResult.cs" />
     <Compile Include="Results\GetSongResult.cs" />
+    <Compile Include="Results\ICreatePlaylistResult.cs" />
+    <Compile Include="Results\IDeletePlaylistResult.cs" />
+    <Compile Include="Results\IEmptyResponseResult.cs" />
     <Compile Include="Results\IGetAlbumResult.cs" />
+    <Compile Include="Results\IGetAllPlaylistsResult.cs" />
     <Compile Include="Results\IGetArtistResult.cs" />
     <Compile Include="Results\IGetIndexResult.cs" />
     <Compile Include="Results\IGetMusicDirectoryResult.cs" />
+    <Compile Include="Results\IGetPlaylistResult.cs" />
+    <Compile Include="Results\IGetRandomSongsResult.cs" />
     <Compile Include="Results\IGetRootResult.cs" />
     <Compile Include="Results\IGetSongResult.cs" />
+    <Compile Include="Results\IPingResult.cs" />
+    <Compile Include="Results\IRenamePlaylistResult.cs" />
     <Compile Include="Results\ISearchResult.cs" />
     <Compile Include="Results\IServiceResultBase.cs" />
+    <Compile Include="Results\IUpdatePlaylistResult.cs" />
     <Compile Include="Results\MessageDialogResult.cs" />
+    <Compile Include="Results\PingResult.cs" />
+    <Compile Include="Results\RenamePlaylistResult.cs" />
     <Compile Include="Results\ResultExtensionsMethods.cs" />
     <Compile Include="Results\SearchResult.cs" />
     <Compile Include="Results\ServiceResultBase.cs" />
-    <Compile Include="EventAggregatorMessages\AddItemsMessage.cs" />
-    <Compile Include="Services\CustomFrameAdapter.cs" />
-    <Compile Include="Services\ICustomFrameAdapter.cs" />
+    <Compile Include="Results\SubsonicApiCallErrorResponseHandler.cs" />
+    <Compile Include="Results\UpdatePlaylistResult.cs" />
+    <Compile Include="Services\DataStructures\PlayerManagementService\IPlayer.cs" />
+    <Compile Include="Services\DataStructures\PlayerManagementService\IVideoPlayer.cs" />
+    <Compile Include="Services\DataStructures\PlayerManagementService\PlaybackStateEventArgs.cs" />
+    <Compile Include="Services\DataStructures\PlayerManagementService\PlayerType.cs" />
+    <Compile Include="Services\DataStructures\PlaylistManagementService\PlaybackState.cs" />
     <Compile Include="Services\DataStructures\SubsonicService\ImageType.cs" />
-    <Compile Include="Helpers\IMediaControlHandler.cs" />
+    <Compile Include="Services\DataStructures\SubsonicService\ISubsonicServiceConfiguration.cs" />
+    <Compile Include="Services\DataStructures\SubsonicService\SubsonicServiceConfiguration.cs" />
+    <Compile Include="Services\DataStructures\SubsonicService\SubsonicServiceConfigurationExtensions.cs" />
+    <Compile Include="Services\IPlayerManagementService.cs" />
     <Compile Include="Services\IPlaylistManagementService.cs" />
     <Compile Include="Services\IStorageService.cs" />
     <Compile Include="Services\ISubsonicService.cs" />
-    <Compile Include="Services\DataStructures\SubsonicService\ISubsonicServiceConfiguration.cs" />
     <Compile Include="Services\IWinRTWrappersService.cs" />
-    <Compile Include="Helpers\MediaControlHandler.cs" />
+    <Compile Include="Services\PlayerManagementService.cs" />
     <Compile Include="Services\PlaylistManagementService.cs" />
-    <Compile Include="EventAggregatorMessages\PlaylistStateChangedMessage.cs" />
-    <Compile Include="EventAggregatorMessages\JumpToPreviousMessage.cs" />
-    <Compile Include="EventAggregatorMessages\JumpToNextMessage.cs" />
-    <Compile Include="EventAggregatorMessages\StopPlaybackMessage.cs" />
     <Compile Include="Services\StorageService.cs" />
     <Compile Include="Services\SubsonicService.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DataStructures\SubsonicService\SubsonicServiceConfigurationExtensions.cs" />
     <Compile Include="Services\WinRTWrappersService.cs" />
+    <Compile Include="SubsonicCommonModule.cs" />
+    <EmbeddedResource Include="Properties\Client.Common.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Caliburn.Micro, Version=3.0.1.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.Core.3.0.1\lib\portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0\Caliburn.Micro.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Caliburn.Micro.Platform, Version=3.0.1.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.3.0.1\lib\win81\Caliburn.Micro.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.0.1.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.3.0.1\lib\win81\Caliburn.Micro.Platform.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Callisto, Version=1.2.7.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Callisto.1.3.1\lib\winrt45\Callisto.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroLog, Version=1.0.1.0, Culture=neutral, PublicKeyToken=ba4ace74c3b410f3, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroLog.1.0.1\lib\win81\MetroLog.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MetroLog.WinRT, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroLog.1.0.1\lib\win81\MetroLog.WinRT.winmd</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Xaml.Interactions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.3.0.1\lib\win81\Microsoft.Xaml.Interactions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Xaml.Interactivity, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Caliburn.Micro.3.0.1\lib\win81\Microsoft.Xaml.Interactivity.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MugenInjection.Core">
-      <HintPath>..\packages\MugenInjection.3.5.1\lib\netcore45\MugenInjection.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Windows.UI.Interactivity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=2f4cf195f2e6765d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Windows.UI.Interactivity.1.3.0.0\lib\win8\Windows.UI.Interactivity.dll</HintPath>
-    </Reference>
-    <Reference Include="WinRtUtility">
-      <HintPath>..\packages\ObjectStorageHelper.5.0.0\lib\netcore45\WinRtUtility.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{fb0a8f0d-052f-4331-ab25-4e313594ee60}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
-    <VisualStudioVersion>12.0</VisualStudioVersion>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

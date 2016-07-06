@@ -137,10 +137,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Client.Common\Client.Common.csproj">
-      <Project>{a8f49761-4d7a-458f-b1b1-4a66c421b3aa}</Project>
-      <Name>Client.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SubEchoNest\SubEchoNest.csproj">
       <Project>{431f874c-ede9-4255-906b-1b3d4d460ad3}</Project>
       <Name>SubEchoNest</Name>

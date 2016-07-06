@@ -153,10 +153,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Client.Common\Client.Common.csproj">
-      <Project>{a8f49761-4d7a-458f-b1b1-4a66c421b3aa}</Project>
-      <Name>Client.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Common.Mocks\Common.Mocks.csproj">
       <Project>{a3b01298-4607-4ed2-a361-c5541845174c}</Project>
       <Name>Common.Mocks</Name>

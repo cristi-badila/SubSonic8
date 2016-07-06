@@ -9,18 +9,11 @@
     {
         protected readonly XNamespace Namespace = "http://subsonic.org/restapi";
 
-        public override string RequestUrl
-        {
-            get
-            {
-
-                return string.Format(
-                    Configuration.RequestFormatWithUsernameAndPassword(),
-                    ResourcePath,
-                    Configuration.Username,
-                    Configuration.EncodedPassword);
-            }
-        }
+        public override string RequestUrl => string.Format(
+            Configuration.RequestFormatWithUsernameAndPassword(),
+            ResourcePath,
+            Configuration.Username,
+            Configuration.EncodedPassword);
 
         public ISubsonicServiceConfiguration Configuration { get; private set; }
 

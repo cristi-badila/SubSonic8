@@ -15,12 +15,15 @@
 
         protected readonly SingletonsCollection Singletons = new SingletonsCollection();
 
+        protected Container Container { get; set; }
+
         #endregion
 
         #region Public Methods and Operators
 
         public void RegisterServices(Container container)
         {
+            Container = container;
             PrepareForLoad();
             var singletonTypes = Singletons.SelectMany(singleton => singleton.TypesToBind);
             var types = GetType().GetTypeInfo().Assembly.GetTypes().Except(singletonTypes);

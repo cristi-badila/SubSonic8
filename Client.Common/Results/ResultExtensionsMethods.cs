@@ -9,7 +9,15 @@
 
         public static void Execute(this IEnumerable<IResult> results, ActionExecutionContext context = null)
         {
-            new SequentialResult(results.GetEnumerator()).Execute(context ?? new ActionExecutionContext());
+            var coroutineExecutionContext = new CoroutineExecutionContext();
+            if (context != null)
+            {
+                coroutineExecutionContext.Source = context.Source;
+                coroutineExecutionContext.Target = context.Target;
+                coroutineExecutionContext.View = context.View;
+            }
+
+            new SequentialResult(results.GetEnumerator()).Execute(coroutineExecutionContext);
         }
 
         #endregion
