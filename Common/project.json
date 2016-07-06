@@ -1,8 +1,7 @@
 ﻿{
   "dependencies": {
-    "Caliburn.Micro": "3.0.1",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
-    "SimpleInjector": "3.2.0",
+    "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
     "SimpleInjector.Packaging": "3.2.0"
   },
   "frameworks": {

@@ -124,12 +124,6 @@
     <Compile Include="SubEchoNestModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{11d7fb8c-1a2c-4d5b-b129-937d76468a78}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="MugenInjection.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=fe46ad421dd3b0e6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MugenInjection.3.5.1\lib\netcore45\MugenInjection.Core.dll</HintPath>

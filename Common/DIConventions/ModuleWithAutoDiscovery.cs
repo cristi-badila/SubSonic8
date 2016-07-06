@@ -1,17 +1,17 @@
-﻿namespace Common.MugenExtensions
+﻿namespace Common.DIConventions
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using MugenInjection;
-    using MugenInjection.Core;
+    using SimpleInjector;
+    using SimpleInjector.Packaging;
 
-    public abstract class MugenModuleWithAutoDiscoveryBase : InjectorModule
+    public abstract class ModuleWithAutoDiscovery : IPackage
     {
         #region Fields
 
-        protected readonly List<MugenConvetion> Conventions = new List<MugenConvetion>();
+        protected readonly List<Convetion> Conventions = new List<Convetion>();
 
         protected readonly SingletonsCollection Singletons = new SingletonsCollection();
 
@@ -19,16 +19,18 @@
 
         #region Public Methods and Operators
 
-        public override void Load()
+        public void RegisterServices(Container container)
         {
             PrepareForLoad();
-            var singletonTypes = Singletons.SelectMany(singleton => singleton.Item1);
+            var singletonTypes = Singletons.SelectMany(singleton => singleton.TypesToBind);
             var types = GetType().GetTypeInfo().Assembly.GetTypes().Except(singletonTypes);
             ApplyConventions(types);
-
-            foreach (var singleton in Singletons)
+            foreach (var singletonInfo in Singletons)
             {
-                Injector.Bind(singleton.Item1.ToArray()).To(singleton.Item2).InSingletonScope();
+                foreach (var typeToBind in singletonInfo.TypesToBind)
+                {
+                    container.RegisterSingleton(typeToBind, singletonInfo.TypeToBindTo);
+                }
             }
         }
 

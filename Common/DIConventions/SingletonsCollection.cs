@@ -1,9 +1,9 @@
-﻿namespace Common.MugenExtensions
+﻿namespace Common.DIConventions
 {
     using System;
     using System.Collections.Generic;
 
-    public class SingletonsCollection : List<Tuple<IEnumerable<Type>, Type>>
+    public class SingletonsCollection : List<SingletonInfo>
     {
         public void Add<TInterface, TImplementation>(bool bindAlsoToImplementation = false)
         {
@@ -13,7 +13,7 @@
                 typesToBind.Add(typeof(TImplementation));
             }
 
-            Add(new Tuple<IEnumerable<Type>, Type>(typesToBind, typeof(TImplementation)));
+            Add(new SingletonInfo(typesToBind, typeof(TImplementation)));
         }
     }
 }

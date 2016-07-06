@@ -1,16 +1,17 @@
-﻿namespace Common.MugenExtensions
+﻿namespace Common.DIConventions
 {
     using System;
     using System.Reflection;
-    using MugenInjection;
-    using MugenInjection.Interface;
+    using SimpleInjector;
 
     public class ViewModelConvention : InterfaceToImplementationBaseConvention
     {
+        private const string ViewModeleSufix = "ViewModel";
+
         #region Constructors and Destructors
 
-        public ViewModelConvention(IInjector injector)
-            : base(injector)
+        public ViewModelConvention(Container container)
+            : base(container)
         {
         }
 
@@ -22,14 +23,14 @@
         {
             var typeInfo = type.GetTypeInfo();
 
-            return typeInfo.IsInterface && typeInfo.Name.EndsWith("ViewModel") && GetTargetType(type) != null;
+            return typeInfo.IsInterface && typeInfo.Name.EndsWith(ViewModeleSufix) && GetTargetType(type) != null;
         }
 
         public override void CreateBinding(Type type)
         {
             var targetType = GetTargetType(type);
 
-            Injector.Bind(type).To(targetType).InSingletonScope();
+            Container.Register(type, targetType, Lifestyle.Transient);
         }
 
         #endregion

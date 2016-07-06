@@ -1,21 +1,21 @@
-﻿namespace Common.MugenExtensions
+﻿namespace Common.DIConventions
 {
     using System;
-    using MugenInjection.Interface;
+    using SimpleInjector;
 
-    public abstract class MugenConvetion
+    public abstract class Convetion
     {
         #region Fields
 
-        protected readonly IInjector Injector;
+        protected readonly Container Container;
 
         #endregion
 
         #region Constructors and Destructors
 
-        protected MugenConvetion(IInjector injector)
+        protected Convetion(Container container)
         {
-            Injector = injector;
+            Container = container;
         }
 
         #endregion

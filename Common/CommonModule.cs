@@ -1,10 +1,10 @@
 ﻿namespace Common
 {
+    using Common.DIConventions;
     using Common.Interfaces;
-    using Common.MugenExtensions;
     using Common.Services;
 
-    public class CommonModule : MugenModuleWithAutoDiscoveryBase
+    public class CommonModule : ModuleWithAutoDiscovery
     {
         protected override void PrepareForLoad()
         {

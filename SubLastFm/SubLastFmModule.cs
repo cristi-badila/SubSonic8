@@ -1,12 +1,12 @@
 ﻿namespace SubLastFm
 {
-    using Common.MugenExtensions;
+    using Common.DIConventions;
 
-    public class SubLastFmModule : MugenModuleWithAutoDiscoveryBase
+    public class SubLastFmModule : ModuleWithAutoDiscovery
     {
         protected override void PrepareForLoad()
         {
-            Conventions.AddRange(new MugenConvetion[] { new ServiceConvention(Injector) });
+            Conventions.AddRange(new Convetion[] { new ServiceConvention(Injector) });
         }
     }
 }

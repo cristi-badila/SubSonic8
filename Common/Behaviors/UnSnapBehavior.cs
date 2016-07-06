@@ -1,8 +1,8 @@
 ﻿namespace Common.Behaviors
 {
-    using Windows.UI.Interactivity;
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
+    using Microsoft.Xaml.Interactivity;
 
     public class UnsnapBehavior : Behavior<Button>
     {
@@ -20,6 +20,7 @@
 
         private static void AssociatedObjectOnClick(object sender, RoutedEventArgs routedEventArgs)
         {
+            //ToDo replace this behavior with a maximize behavior
             Windows.UI.ViewManagement.ApplicationView.TryUnsnap();
         }
     }

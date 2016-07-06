@@ -1,12 +1,12 @@
 ﻿namespace SubEchoNest
 {
-    using Common.MugenExtensions;
+    using Common.DIConventions;
 
-    public class SubEchoNestModule : MugenModuleWithAutoDiscoveryBase
+    public class SubEchoNestModule : ModuleWithAutoDiscovery
     {
         protected override void PrepareForLoad()
         {
-            Conventions.AddRange(new MugenConvetion[] { new ServiceConvention(Injector) });
+            Conventions.AddRange(new Convetion[] { new ServiceConvention(Injector) });
         }
     }
 }

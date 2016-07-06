@@ -1,15 +1,15 @@
-﻿namespace Common.MugenExtensions
+﻿namespace Common.DIConventions
 {
     using System;
     using System.Reflection;
-    using MugenInjection.Interface;
+    using SimpleInjector;
 
-    public abstract class InterfaceToImplementationBaseConvention : MugenConvetion
+    public abstract class InterfaceToImplementationBaseConvention : Convetion
     {
         #region Constructors and Destructors
 
-        protected InterfaceToImplementationBaseConvention(IInjector injector)
-            : base(injector)
+        protected InterfaceToImplementationBaseConvention(Container container)
+            : base(container)
         {
         }
 

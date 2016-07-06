@@ -1,8 +1,8 @@
 ﻿namespace Client.Common
 {
-    using global::Common.MugenExtensions;
+    using global::Common.DIConventions;
 
-    public class SubsonicCommonModule : MugenModuleWithAutoDiscoveryBase
+    public class SubsonicCommonModule : ModuleWithAutoDiscovery
     {
         #region Methods
 

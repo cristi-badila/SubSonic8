@@ -1,16 +1,17 @@
-﻿namespace Common.MugenExtensions
+﻿namespace Common.DIConventions
 {
     using System;
     using System.Reflection;
-    using MugenInjection;
-    using MugenInjection.Interface;
+    using SimpleInjector;
 
     public class ServiceConvention : InterfaceToImplementationBaseConvention
     {
+        private const string ServiceSuffix = "Service";
+
         #region Constructors and Destructors
 
-        public ServiceConvention(IInjector injector)
-            : base(injector)
+        public ServiceConvention(Container container)
+            : base(container)
         {
         }
 
@@ -22,14 +23,13 @@
         {
             var typeInfo = type.GetTypeInfo();
 
-            return typeInfo.IsInterface && typeInfo.Name.EndsWith("Service") && GetTargetType(type) != null;
+            return typeInfo.IsInterface && typeInfo.Name.EndsWith(ServiceSuffix) && GetTargetType(type) != null;
         }
 
         public override void CreateBinding(Type type)
         {
             var targetType = GetTargetType(type);
-
-            Injector.Bind(type).To(targetType).InSingletonScope();
+            Container.RegisterSingleton(type, targetType);
         }
 
         #endregion
