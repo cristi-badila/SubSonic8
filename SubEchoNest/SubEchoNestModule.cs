@@ -6,7 +6,7 @@
     {
         protected override void PrepareForLoad()
         {
-            Conventions.AddRange(new Convetion[] { new ServiceConvention(Injector) });
+            Conventions.AddRange(new Convetion[] { new ServiceConvention(Container) });
         }
     }
 }

@@ -257,10 +257,6 @@
       <Project>{a3b01298-4607-4ed2-a361-c5541845174c}</Project>
       <Name>Common.Mocks</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SubEchoNest\SubEchoNest.csproj">
-      <Project>{431f874c-ede9-4255-906b-1b3d4d460ad3}</Project>
-      <Name>SubEchoNest</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SubLastFm\SubLastFm.csproj">
       <Project>{4485a175-2491-40dd-a683-9ccf21267c45}</Project>
       <Name>SubLastFm</Name>
