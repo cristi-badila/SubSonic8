@@ -144,12 +144,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SubLastFm\SubLastFm.csproj">
-      <Project>{4485a175-2491-40dd-a683-9ccf21267c45}</Project>
-      <Name>SubLastFm</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="FluentAssertions, Version=4.10.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentAssertions.4.10.0\lib\win81\FluentAssertions.dll</HintPath>
       <Private>True</Private>
